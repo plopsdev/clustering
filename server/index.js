@@ -11,7 +11,7 @@ app.use(morgan('dev'));
 const db = mysql.createConnection({
     user: 'Jonathan',
     host: 'localhost', 
-    password: 'CaCahuete1',
+    password: '',
     database: 'clustering',
 })
 
