@@ -3,17 +3,11 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const morgan = require('morgan');
+const db = require('./database')
 
 app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
-
-const db = mysql.createConnection({
-    user: 'Jonathan',
-    host: 'localhost', 
-    password: '',
-    database: 'clustering',
-})
 
 app.get('/pokemons/:generation', function(req, res){
     const generation = req.params.generation;
